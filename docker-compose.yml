@@ -1,0 +1,20 @@
+
+version: '3.8'
+
+services:
+  postgres:
+    image:  postgres:16.0-alpine
+    container_name: postgres-demo
+    
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: marketplace
+    volumes:
+      - postgres:/data
+    ports:
+      - ${DATABASE_PORT}:5432
+
+volumes:
+  postgres:
+    driver: local
