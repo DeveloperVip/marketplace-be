@@ -5,11 +5,12 @@ import { statusItem } from "../enum/item-status.enum";
 
 @Entity("items")
 export class ItemEntity extends BaseEntity implements Iitem{
+    
     @PrimaryGeneratedColumn('uuid')
     id: string;
     @Column({name:'nft_id',nullable:false,type:'varchar'})
     tokenId: string;
-    @Column({name:'seller_id',nullable:false,type:'uuid'})
+    @Column({name:'seller', type: 'varchar'})
     seller: string;
     @Column({name:'owner_id',nullable:false,type:'uuid'})
     owner: string;

@@ -2,13 +2,9 @@ export const environments = {
   onchainData: {
     blockchainName: 'bsc',
     web3Provider: 'https://bsc-prebsc-dataseed.bnbchain.org',
-    marketplaceContractAddress: '0x5d1451a1506B99736c7f553a16B58fe0c1dF5F2e',
+    marketplaceContractAddress: '0x8A21e8325905F2895aE1845184eb8FF7479642Cc',
     marketplaceABI: [
-      {
-        inputs: [],
-        stateMutability: 'nonpayable',
-        type: 'constructor',
-      },
+      { inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
       {
         anonymous: false,
         inputs: [
@@ -105,12 +101,7 @@ export const environments = {
             name: 'price',
             type: 'uint256',
           },
-          {
-            indexed: false,
-            internalType: 'bool',
-            name: 'sold',
-            type: 'bool',
-          },
+          { indexed: false, internalType: 'bool', name: 'sold', type: 'bool' },
         ],
         name: 'MarketItemCreated',
         type: 'event',
@@ -155,16 +146,8 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'to',
-            type: 'address',
-          },
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
+          { internalType: 'address', name: 'to', type: 'address' },
+          { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
         ],
         name: 'approve',
         outputs: [],
@@ -172,32 +155,14 @@ export const environments = {
         type: 'function',
       },
       {
-        inputs: [
-          {
-            internalType: 'address',
-            name: 'owner',
-            type: 'address',
-          },
-        ],
+        inputs: [{ internalType: 'address', name: 'owner', type: 'address' }],
         name: 'balanceOf',
-        outputs: [
-          {
-            internalType: 'uint256',
-            name: '',
-            type: 'uint256',
-          },
-        ],
+        outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
-        inputs: [
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-        ],
+        inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
         name: 'createMarketSale',
         outputs: [],
         stateMutability: 'payable',
@@ -205,25 +170,11 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'string',
-            name: 'tokenURI',
-            type: 'string',
-          },
-          {
-            internalType: 'uint256',
-            name: 'price',
-            type: 'uint256',
-          },
+          { internalType: 'string', name: 'tokenURI', type: 'string' },
+          { internalType: 'uint256', name: 'price', type: 'uint256' },
         ],
         name: 'createToken',
-        outputs: [
-          {
-            internalType: 'uint256',
-            name: '',
-            type: 'uint256',
-          },
-        ],
+        outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
         stateMutability: 'payable',
         type: 'function',
       },
@@ -233,11 +184,7 @@ export const environments = {
         outputs: [
           {
             components: [
-              {
-                internalType: 'uint256',
-                name: 'tokenId',
-                type: 'uint256',
-              },
+              { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
               {
                 internalType: 'address payable',
                 name: 'seller',
@@ -248,16 +195,8 @@ export const environments = {
                 name: 'owner',
                 type: 'address',
               },
-              {
-                internalType: 'uint256',
-                name: 'price',
-                type: 'uint256',
-              },
-              {
-                internalType: 'bool',
-                name: 'sold',
-                type: 'bool',
-              },
+              { internalType: 'uint256', name: 'price', type: 'uint256' },
+              { internalType: 'bool', name: 'sold', type: 'bool' },
             ],
             internalType: 'struct NFTMarketPlace.MarketItem[]',
             name: '',
@@ -273,11 +212,7 @@ export const environments = {
         outputs: [
           {
             components: [
-              {
-                internalType: 'uint256',
-                name: 'tokenId',
-                type: 'uint256',
-              },
+              { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
               {
                 internalType: 'address payable',
                 name: 'seller',
@@ -288,16 +223,8 @@ export const environments = {
                 name: 'owner',
                 type: 'address',
               },
-              {
-                internalType: 'uint256',
-                name: 'price',
-                type: 'uint256',
-              },
-              {
-                internalType: 'bool',
-                name: 'sold',
-                type: 'bool',
-              },
+              { internalType: 'uint256', name: 'price', type: 'uint256' },
+              { internalType: 'bool', name: 'sold', type: 'bool' },
             ],
             internalType: 'struct NFTMarketPlace.MarketItem[]',
             name: '',
@@ -313,11 +240,7 @@ export const environments = {
         outputs: [
           {
             components: [
-              {
-                internalType: 'uint256',
-                name: 'tokenId',
-                type: 'uint256',
-              },
+              { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
               {
                 internalType: 'address payable',
                 name: 'seller',
@@ -328,16 +251,8 @@ export const environments = {
                 name: 'owner',
                 type: 'address',
               },
-              {
-                internalType: 'uint256',
-                name: 'price',
-                type: 'uint256',
-              },
-              {
-                internalType: 'bool',
-                name: 'sold',
-                type: 'bool',
-              },
+              { internalType: 'uint256', name: 'price', type: 'uint256' },
+              { internalType: 'bool', name: 'sold', type: 'bool' },
             ],
             internalType: 'struct NFTMarketPlace.MarketItem[]',
             name: '',
@@ -348,84 +263,40 @@ export const environments = {
         type: 'function',
       },
       {
-        inputs: [
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-        ],
+        inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
         name: 'getApproved',
-        outputs: [
-          {
-            internalType: 'address',
-            name: '',
-            type: 'address',
-          },
-        ],
+        outputs: [{ internalType: 'address', name: '', type: 'address' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [],
         name: 'getListingPrice',
-        outputs: [
-          {
-            internalType: 'uint256',
-            name: '',
-            type: 'uint256',
-          },
-        ],
+        outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'owner',
-            type: 'address',
-          },
-          {
-            internalType: 'address',
-            name: 'operator',
-            type: 'address',
-          },
+          { internalType: 'address', name: 'owner', type: 'address' },
+          { internalType: 'address', name: 'operator', type: 'address' },
         ],
         name: 'isApprovedForAll',
-        outputs: [
-          {
-            internalType: 'bool',
-            name: '',
-            type: 'bool',
-          },
-        ],
+        outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [],
         name: 'listingPrice',
-        outputs: [
-          {
-            internalType: 'uint256',
-            name: '',
-            type: 'uint256',
-          },
-        ],
+        outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [],
         name: 'name',
-        outputs: [
-          {
-            internalType: 'string',
-            name: '',
-            type: 'string',
-          },
-        ],
+        outputs: [{ internalType: 'string', name: '', type: 'string' }],
         stateMutability: 'view',
         type: 'function',
       },
@@ -433,46 +304,22 @@ export const environments = {
         inputs: [],
         name: 'owner',
         outputs: [
-          {
-            internalType: 'address payable',
-            name: '',
-            type: 'address',
-          },
+          { internalType: 'address payable', name: '', type: 'address' },
         ],
         stateMutability: 'view',
         type: 'function',
       },
       {
-        inputs: [
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-        ],
+        inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
         name: 'ownerOf',
-        outputs: [
-          {
-            internalType: 'address',
-            name: '',
-            type: 'address',
-          },
-        ],
+        outputs: [{ internalType: 'address', name: '', type: 'address' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-          {
-            internalType: 'uint256',
-            name: 'price',
-            type: 'uint256',
-          },
+          { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
+          { internalType: 'uint256', name: 'price', type: 'uint256' },
         ],
         name: 'resellToken',
         outputs: [],
@@ -481,21 +328,9 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'from',
-            type: 'address',
-          },
-          {
-            internalType: 'address',
-            name: 'to',
-            type: 'address',
-          },
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
+          { internalType: 'address', name: 'from', type: 'address' },
+          { internalType: 'address', name: 'to', type: 'address' },
+          { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
         ],
         name: 'safeTransferFrom',
         outputs: [],
@@ -504,26 +339,10 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'from',
-            type: 'address',
-          },
-          {
-            internalType: 'address',
-            name: 'to',
-            type: 'address',
-          },
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-          {
-            internalType: 'bytes',
-            name: 'data',
-            type: 'bytes',
-          },
+          { internalType: 'address', name: 'from', type: 'address' },
+          { internalType: 'address', name: 'to', type: 'address' },
+          { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
+          { internalType: 'bytes', name: 'data', type: 'bytes' },
         ],
         name: 'safeTransferFrom',
         outputs: [],
@@ -532,16 +351,8 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'operator',
-            type: 'address',
-          },
-          {
-            internalType: 'bool',
-            name: 'approved',
-            type: 'bool',
-          },
+          { internalType: 'address', name: 'operator', type: 'address' },
+          { internalType: 'bool', name: 'approved', type: 'bool' },
         ],
         name: 'setApprovalForAll',
         outputs: [],
@@ -550,72 +361,32 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'bytes4',
-            name: 'interfaceId',
-            type: 'bytes4',
-          },
+          { internalType: 'bytes4', name: 'interfaceId', type: 'bytes4' },
         ],
         name: 'supportsInterface',
-        outputs: [
-          {
-            internalType: 'bool',
-            name: '',
-            type: 'bool',
-          },
-        ],
+        outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [],
         name: 'symbol',
-        outputs: [
-          {
-            internalType: 'string',
-            name: '',
-            type: 'string',
-          },
-        ],
+        outputs: [{ internalType: 'string', name: '', type: 'string' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
-        inputs: [
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
-        ],
+        inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
         name: 'tokenURI',
-        outputs: [
-          {
-            internalType: 'string',
-            name: '',
-            type: 'string',
-          },
-        ],
+        outputs: [{ internalType: 'string', name: '', type: 'string' }],
         stateMutability: 'view',
         type: 'function',
       },
       {
         inputs: [
-          {
-            internalType: 'address',
-            name: 'from',
-            type: 'address',
-          },
-          {
-            internalType: 'address',
-            name: 'to',
-            type: 'address',
-          },
-          {
-            internalType: 'uint256',
-            name: 'tokenId',
-            type: 'uint256',
-          },
+          { internalType: 'address', name: 'from', type: 'address' },
+          { internalType: 'address', name: 'to', type: 'address' },
+          { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
         ],
         name: 'transferFrom',
         outputs: [],
@@ -624,11 +395,7 @@ export const environments = {
       },
       {
         inputs: [
-          {
-            internalType: 'uint256',
-            name: '_listingPrice',
-            type: 'uint256',
-          },
+          { internalType: 'uint256', name: '_listingPrice', type: 'uint256' },
         ],
         name: 'updateListingPrice',
         outputs: [],

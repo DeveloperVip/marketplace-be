@@ -1,12 +1,13 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { NftEntity } from './domain/nft.entity';
-import { Repository } from 'typeorm';
+import { ILike, Repository } from 'typeorm';
 import { isDefined } from 'class-validator';
 import { CreateNftDto } from './dto/create-nft.dto';
 
 @Injectable()
 export class NftService {
+  private readonly logger = new Logger(NftService.name);
   constructor(
     @InjectRepository(NftEntity)
     private readonly NftRepository: Repository<NftEntity>,
@@ -32,7 +33,12 @@ export class NftService {
   }
 
   public async getNftsByOwner(owner: string): Promise<NftEntity[]> {
-    return this.NftRepository.find({ where: { owner } });
+    this.logger.log(owner);
+    const nft = await this.NftRepository.find({
+      where: { owner: ILike(`%${owner}%`) },
+    });
+    this.logger.log(nft);
+    return nft;
   }
 
   public async getAllNfts(): Promise<NftEntity[]> {

@@ -40,7 +40,7 @@ export class ItemService {
 
   public async getItemsByUserId(seller: string): Promise<ItemEntity[]>{
     return this.itemsRepository.find({
-      where: {seller}
+      where: {owner: seller}
     })
   }
 

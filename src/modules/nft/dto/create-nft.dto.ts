@@ -1,5 +1,6 @@
 export interface CreateNftDto {
-    // owner: string,
+    owner: string,
     address: string,
-    nftId: number
+    nftId: number,
+    uri:string
 }

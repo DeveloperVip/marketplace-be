@@ -21,7 +21,7 @@ export class NftController {
     return this.nftService.getNftsByOwner(owner);
   }
 
-  @Get('/:nftId')
+  @Get('/get-nft/:nftId')
   public async getNftById(@Param("nftId") nftId: number): Promise<NftEntity> {
     return this.nftService.getNftById(nftId);
   }
